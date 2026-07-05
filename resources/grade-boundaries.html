@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grade Boundaries — IB Prep</title>
+<link rel="stylesheet" href="resources.css">
+</head>
+<body id="top">
+<script>document.documentElement.classList.add('anim');</script>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="../IB Prep.html"><img class="brand-mark" src="../images/asset-logo.png?v=2" alt=""><span class="brand-text">IB<b>Prep</b></span></a>
+    <nav class="nav-links">
+      <a href="../IB Prep.html#offerings">Our Offerings</a>
+      <a href="../IB Prep.html#why">Why IB</a>
+      <a href="../IB Prep.html#resources">Resources</a>
+      <a href="../IB Prep.html#results">Results</a>
+    </nav>
+    <a class="btn btn-cta" href="https://forms.gle/37zJDm5YSWEWasqJ8" target="_blank" rel="noopener">Enroll Now</a>
+    <button class="burger" id="burger" aria-label="Open menu"><i data-lucide="menu"></i></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mm-in">
+      <a href="../IB Prep.html#offerings">Our Offerings</a>
+      <a href="../IB Prep.html#why">Why IB</a>
+      <a href="../IB Prep.html#resources">Resources</a>
+      <a href="../IB Prep.html#results">Results</a>
+      <a class="btn btn-cta" href="https://forms.gle/37zJDm5YSWEWasqJ8" target="_blank" rel="noopener">Enroll Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-head">
+  <div class="bg-deco" aria-hidden="true">
+    <div class="deco-dots"></div>
+    <div class="deco-bloom tl"></div>
+    <div class="deco-bloom br"></div>
+  </div>
+  <div class="wrap">
+    <a class="crumb" href="../IB Prep.html#resources" data-reveal><i data-lucide="arrow-left"></i> Free Resources</a>
+    <span class="eyebrow" data-reveal style="--d:.04s">Free Resources</span>
+    <h1 data-reveal style="--d:.08s">Grade <span class="accent">Boundaries</span>.</h1>
+    <p class="lead" data-reveal style="--d:.14s">Official boundary tables for every session from 2023 onwards, by subject and level.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<main class="page-body">
+  <div class="wrap">
+    <div class="toolbar" data-reveal>
+      <div class="filter-group" data-filter="subject">
+        <span class="filter-label">Subject</span>
+        <div class="chips">
+          <button class="chip-btn" data-value="all">All</button>
+          <button class="chip-btn active" data-value="Subject 1">Subject 1</button>
+          <button class="chip-btn" data-value="Subject 2">Subject 2</button>
+          <button class="chip-btn" data-value="Subject 3">Subject 3</button>
+          <button class="chip-btn" data-value="Subject 4">Subject 4</button>
+          <button class="chip-btn" data-value="Subject 5">Subject 5</button>
+          <button class="chip-btn" data-value="Subject 6">Subject 6</button>
+        </div>
+      </div>
+      <div class="filter-group" data-filter="level">
+        <span class="filter-label">Level</span>
+        <div class="seg">
+          <button class="active" data-value="all">All</button>
+          <button data-value="HL">HL</button>
+          <button data-value="SL">SL</button>
+        </div>
+      </div>
+      <div class="count" data-count="tables"></div>
+    </div>
+
+    <div class="doc-grid" id="grid"></div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <a class="logo" href="../IB Prep.html"><span class="brand-text">IB<b>Prep</b></span></a>
+    <nav class="foot-links">
+      <a href="../IB Prep.html#offerings">Our Offerings</a>
+      <a href="../IB Prep.html#why">Why IB</a>
+      <a href="../IB Prep.html#resources">Resources</a>
+      <a href="../IB Prep.html#results">Results</a>
+      <a href="../IB Prep.html#contact">Find Us</a>
+    </nav>
+    <div class="copy">© 2026 IB Prep. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="resources.js"></script>
+<script>
+  /* ===== Grade Boundaries data — swap "#" for real file URLs when ready ===== */
+  const SUBJECTS = ["Subject 1","Subject 2","Subject 3","Subject 4","Subject 5","Subject 6"];
+  const SESSIONS = [
+    "May/June 2023","Oct/Nov 2023",
+    "May/June 2024","Oct/Nov 2024",
+    "May/June 2025","Oct/Nov 2025"
+  ];
+
+  buildDocGrid({
+    mountId: "grid",
+    icon: "bar-chart-3",
+    subjects: SUBJECTS,
+    levels: ["HL","SL"],
+    editions: SESSIONS.map(s => ({ title: s, sub: "Grade boundaries" })),
+    // return real links per table here later:
+    links: (subject, level, ed) => ({ preview: "#", download: "#" })
+  });
+
+  initChrome();
+  initFilters();
+</script>
+</body>
+</html>

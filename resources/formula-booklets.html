@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formula Booklets — IB Prep</title>
+<link rel="stylesheet" href="resources.css">
+</head>
+<body id="top">
+<script>document.documentElement.classList.add('anim');</script>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="logo" href="../IB Prep.html"><img class="brand-mark" src="../images/asset-logo.png?v=2" alt=""><span class="brand-text">IB<b>Prep</b></span></a>
+    <nav class="nav-links">
+      <a href="../IB Prep.html#offerings">Our Offerings</a>
+      <a href="../IB Prep.html#why">Why IB</a>
+      <a href="../IB Prep.html#resources">Resources</a>
+      <a href="../IB Prep.html#results">Results</a>
+    </nav>
+    <a class="btn btn-cta" href="https://forms.gle/37zJDm5YSWEWasqJ8" target="_blank" rel="noopener">Enroll Now</a>
+    <button class="burger" id="burger" aria-label="Open menu"><i data-lucide="menu"></i></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mm-in">
+      <a href="../IB Prep.html#offerings">Our Offerings</a>
+      <a href="../IB Prep.html#why">Why IB</a>
+      <a href="../IB Prep.html#resources">Resources</a>
+      <a href="../IB Prep.html#results">Results</a>
+      <a class="btn btn-cta" href="https://forms.gle/37zJDm5YSWEWasqJ8" target="_blank" rel="noopener">Enroll Now</a>
+    </div>
+  </div>
+</header>
+
+<!-- PAGE HEADER -->
+<section class="page-head">
+  <div class="bg-deco" aria-hidden="true">
+    <div class="deco-dots"></div>
+    <div class="deco-bloom tl"></div>
+    <div class="deco-bloom br"></div>
+  </div>
+  <div class="wrap">
+    <a class="crumb" href="../IB Prep.html#resources" data-reveal><i data-lucide="arrow-left"></i> Free Resources</a>
+    <span class="eyebrow" data-reveal style="--d:.04s">Free Resources</span>
+    <h1 data-reveal style="--d:.08s">Formula <span class="accent">Booklets</span>.</h1>
+    <p class="lead" data-reveal style="--d:.14s">Official, print-ready formula booklets — one per course. Preview before you download.</p>
+  </div>
+</section>
+
+<!-- BODY -->
+<main class="page-body">
+  <div class="wrap">
+    <div class="toolbar" data-reveal>
+      <div class="filter-group" data-filter="subject">
+        <span class="filter-label">Course</span>
+        <div class="chips">
+          <button class="chip-btn active" data-value="all">All</button>
+          <button class="chip-btn" data-value="Subject 1">Subject 1</button>
+          <button class="chip-btn" data-value="Subject 2">Subject 2</button>
+          <button class="chip-btn" data-value="Subject 3">Subject 3</button>
+          <button class="chip-btn" data-value="Subject 4">Subject 4</button>
+          <button class="chip-btn" data-value="Subject 5">Subject 5</button>
+          <button class="chip-btn" data-value="Subject 6">Subject 6</button>
+        </div>
+      </div>
+      <div class="count" data-count="booklets"></div>
+    </div>
+
+    <div class="doc-grid" id="grid"></div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap foot">
+    <a class="logo" href="../IB Prep.html"><span class="brand-text">IB<b>Prep</b></span></a>
+    <nav class="foot-links">
+      <a href="../IB Prep.html#offerings">Our Offerings</a>
+      <a href="../IB Prep.html#why">Why IB</a>
+      <a href="../IB Prep.html#resources">Resources</a>
+      <a href="../IB Prep.html#results">Results</a>
+      <a href="../IB Prep.html#contact">Find Us</a>
+    </nav>
+    <div class="copy">© 2026 IB Prep. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="resources.js"></script>
+<script>
+  /* ===== Formula Booklets data — swap "#" for real file URLs when ready =====
+     One booklet per course. */
+  const COURSES = [
+    { name: "Subject 1", preview: "#", download: "#" },
+    { name: "Subject 2", preview: "#", download: "#" },
+    { name: "Subject 3", preview: "#", download: "#" },
+    { name: "Subject 4", preview: "#", download: "#" },
+    { name: "Subject 5", preview: "#", download: "#" },
+    { name: "Subject 6", preview: "#", download: "#" }
+  ];
+
+  document.getElementById("grid").innerHTML = COURSES.map((c, i) => `
+    <div class="rdoc" data-reveal style="--d:${Math.min(i,8)*0.05}s" data-subject="${c.name}">
+      <div class="rdoc-top">
+        <div class="rdoc-ic"><i data-lucide="sigma"></i></div>
+      </div>
+      <div class="rdoc-subject">Formula Booklet</div>
+      <div class="rdoc-title">${c.name}</div>
+      <div class="rdoc-meta">Official · print-ready</div>
+      <div class="rdoc-actions">
+        <a class="rbtn ghost" href="${c.preview}" target="_blank" rel="noopener"><i data-lucide="eye"></i> Preview</a>
+        <a class="rbtn solid" href="${c.download}" target="_blank" rel="noopener"><i data-lucide="download"></i> Download</a>
+      </div>
+    </div>`).join("") + `<div class="empty" hidden><i data-lucide="search-x"></i>No booklets match your filters.</div>`;
+
+  initChrome();
+  initFilters();
+</script>
+</body>
+</html>
