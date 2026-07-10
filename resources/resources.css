@@ -4,8 +4,8 @@
    Nexa type, cyan + amber accents, soft-paper field, white cards.
    ============================================================ */
 
-@font-face{font-family:'Nexa';src:url('../fonts/Nexa-Heavy.ttf') format('truetype');font-weight:800;font-style:normal;font-display:swap;}
-@font-face{font-family:'Nexa';src:url('../fonts/Nexa-ExtraLight.ttf') format('truetype');font-weight:200;font-style:normal;font-display:swap;}
+@font-face{font-family:'Nexa';src:url('../fonts/Nexa-Bold.otf') format('opentype');font-weight:800;font-style:normal;font-display:swap;}
+@font-face{font-family:'Nexa';src:url('../fonts/Nexa-Light.otf') format('opentype');font-weight:200;font-style:normal;font-display:swap;}
 
 :root{
   --bg:#ffffff;
