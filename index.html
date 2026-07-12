@@ -26,8 +26,8 @@
     --nexa:'Nexa','Jost',sans-serif;
 
     /* baked-in placements for the 5 brand assets (from Arrange panel) */
-    --ul-x:79px;  --ul-y:-4px;  --ul-s:0.6;  --ul-r:4deg;
-    --sp-x:-7px;  --sp-y:17px;  --sp-s:1;    --sp-r:-17deg;
+    --ul-x:59px;  --ul-y:-10px;  --ul-s:0.6;  --ul-r:4deg;
+    --sp-x:-7px;  --sp-y:4px;  --sp-s:1;    --sp-r:-17deg;
     --cl-x:-69px; --cl-y:-33px; --cl-s:1.13; --cl-r:0deg;
     --cr-x:77px;  --cr-y:-96px; --cr-s:1;    --cr-r:-3deg;
   }
@@ -261,11 +261,11 @@
   /* FIND US — contact + map */
   .findus{background:var(--bg);position:relative;}
   .findus .findus-head{margin-bottom:42px;}
-  .findus-card{display:grid;grid-template-columns:1fr 1.12fr;max-width:900px;margin-inline:auto;
-    border:1px solid var(--hair);border-radius:28px;overflow:hidden;background:var(--bg);
+  .findus-card{display:grid;grid-template-columns:1fr 1.12fr;max-width:760px;margin-inline:auto;
+    border:1px solid var(--hair);border-radius:24px;overflow:hidden;background:var(--bg);
     box-shadow:0 30px 70px -46px rgba(35,31,32,.4);}
-  .findus-info{padding:38px 34px;background:var(--dark);display:flex;flex-direction:column;}
-  .contact-list{display:flex;flex-direction:column;gap:20px;}
+  .findus-info{padding:30px 26px;background:var(--dark);display:flex;flex-direction:column;}
+  .contact-list{display:flex;flex-direction:column;gap:15px;}
   .c-item{display:flex;gap:16px;align-items:flex-start;}
   .c-item .ic{flex:none;width:46px;height:46px;border-radius:13px;border:1px solid rgba(255,255,255,.16);
     background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:#ffffff;}
@@ -293,7 +293,7 @@
   .school-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
   .chip{font-family:var(--nexa);font-weight:200;font-size:13px;letter-spacing:0;color:rgba(245,242,236,.7);
     padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);}
-  .findus-map{position:relative;min-height:420px;background:var(--bg-soft);}
+  .findus-map{position:relative;min-height:340px;background:var(--bg-soft);}
   .findus-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;
     filter:grayscale(.16) contrast(1.02);}
   @media(max-width:860px){
@@ -694,11 +694,22 @@
           <div class="c-item">
             <div class="ic"><i data-lucide="phone"></i></div>
             <div class="c-body">
-              <div class="c-label">WhatsApp &amp; Phone</div>
+              <div class="c-label">IB &mdash; WhatsApp &amp; Phone</div>
               <div class="c-val"><a class="big" href="tel:+923219499991">+92 321 949 9991</a></div>
               <div class="c-actions">
                 <a class="c-btn wa" href="https://api.whatsapp.com/send/?phone=923219499991&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp</a>
                 <a class="c-btn" href="tel:+923219499991"><i data-lucide="phone"></i> Call</a>
+              </div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="ic"><i data-lucide="phone"></i></div>
+            <div class="c-body">
+              <div class="c-label">Cambridge &mdash; WhatsApp &amp; Phone</div>
+              <div class="c-val"><a class="big" href="tel:+923019658477">+92 301 965 8477</a></div>
+              <div class="c-actions">
+                <a class="c-btn wa" href="https://api.whatsapp.com/send/?phone=923019658477&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp</a>
+                <a class="c-btn" href="tel:+923019658477"><i data-lucide="phone"></i> Call</a>
               </div>
             </div>
           </div>
