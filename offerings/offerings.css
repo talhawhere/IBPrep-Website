@@ -12,6 +12,7 @@
   transition:background .3s ease,border-color .3s,box-shadow .3s;}
 .nav .logo{color:var(--paper);}
 .nav .logo b{color:var(--blue);}
+.logo .brand-mark{width:55px;height:auto;margin:-18px;flex:none;transform:translateY(-2px);}
 .nav-links a{color:rgba(245,242,236,.72);}
 .nav-links a:hover{color:#fff;}
 .burger{border-color:rgba(255,255,255,.32);color:#fff;}
