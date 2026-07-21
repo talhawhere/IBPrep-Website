@@ -264,11 +264,11 @@
   /* FIND US — contact + map */
   .findus{background:var(--bg);position:relative;}
   .findus .findus-head{margin-bottom:42px;}
-  .findus-card{display:grid;grid-template-columns:1fr 1.12fr;max-width:900px;margin-inline:auto;
-    border:1px solid var(--hair);border-radius:28px;overflow:hidden;background:var(--bg);
+  .findus-card{display:grid;grid-template-columns:1fr 1.12fr;max-width:760px;margin-inline:auto;
+    border:1px solid var(--hair);border-radius:24px;overflow:hidden;background:var(--bg);
     box-shadow:0 30px 70px -46px rgba(35,31,32,.4);}
-  .findus-info{padding:38px 34px;background:var(--dark);display:flex;flex-direction:column;}
-  .contact-list{display:flex;flex-direction:column;gap:20px;}
+  .findus-info{padding:30px 26px;background:var(--dark);display:flex;flex-direction:column;}
+  .contact-list{display:flex;flex-direction:column;gap:15px;}
   .c-item{display:flex;gap:16px;align-items:flex-start;}
   .c-item .ic{flex:none;width:46px;height:46px;border-radius:13px;border:1px solid rgba(255,255,255,.16);
     background:rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center;color:#ffffff;}
@@ -296,7 +296,7 @@
   .school-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
   .chip{font-family:var(--nexa);font-weight:300;font-size:13px;letter-spacing:0;color:rgba(245,242,236,.7);
     padding:7px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);}
-  .findus-map{position:relative;min-height:420px;background:var(--bg-soft);}
+  .findus-map{position:relative;min-height:340px;background:var(--bg-soft);}
   .findus-map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;
     filter:grayscale(.16) contrast(1.02);}
   @media(max-width:860px){
@@ -346,6 +346,8 @@
     .stats{grid-template-columns:1fr;}
     .stat{border-right:0;border-bottom:1px solid rgba(255,255,255,.14);}
     .stat:last-child{border-bottom:0;}
+    .why-copy{width:100% !important;height:auto !important;font-size:16px !important;max-width:440px;padding:0 8px;}
+    .why-rule{position:static !important;left:auto !important;top:auto !important;}
   }
   @media(max-width:760px){
     .wrap{padding:0 24px;}
@@ -551,10 +553,10 @@
       <a class="card" href="resources/past-papers.html" data-reveal>
         <div class="ic"><i data-lucide="file-text"></i></div>
         <h3>Past Papers</h3>
-        <p class="card-sub">2015–present, every subject.</p>
+        <p class="card-sub">2020–present, every subject.</p>
         <div class="arrow">Browse <i data-lucide="arrow-right"></i></div>
       </a>
-      <a class="card" href="resources/mock-papers.html" data-reveal style="--d:.08s">
+      <a class="card cs-soon" href="resources/mock-papers.html" data-soon="Mock Papers" data-reveal style="--d:.08s">
         <div class="ic"><i data-lucide="clipboard-list"></i></div>
         <h3>Mock Papers</h3>
         <p class="card-sub">Exam-style practice sets.</p>
@@ -566,19 +568,19 @@
         <p class="card-sub">Official answer keys.</p>
         <div class="arrow">Browse <i data-lucide="arrow-right"></i></div>
       </a>
-      <a class="card" href="resources/grade-boundaries.html" data-reveal style="--d:.24s">
+      <a class="card cs-soon" href="resources/grade-boundaries.html" data-soon="Grade Boundaries" data-reveal style="--d:.24s">
         <div class="ic"><i data-lucide="bar-chart-3"></i></div>
         <h3>Grade Boundaries</h3>
         <p class="card-sub">Updated every session.</p>
         <div class="arrow">Browse <i data-lucide="arrow-right"></i></div>
       </a>
-      <a class="card" href="resources/formula-booklets.html" data-reveal style="--d:.32s">
+      <a class="card cs-soon" href="resources/formula-booklets.html" data-soon="Formula Booklets" data-reveal style="--d:.32s">
         <div class="ic"><i data-lucide="sigma"></i></div>
         <h3>Formula Booklets</h3>
         <p class="card-sub">Official, print-ready.</p>
         <div class="arrow">Browse <i data-lucide="arrow-right"></i></div>
       </a>
-      <a class="card" href="resources/study-guides.html" data-reveal style="--d:.4s">
+      <a class="card cs-soon" href="resources/study-guides.html" data-soon="Study Guides" data-reveal style="--d:.4s">
         <div class="ic"><i data-lucide="book-marked"></i></div>
         <h3>Study Guides</h3>
         <p class="card-sub">Concise revision notes.</p>
@@ -699,11 +701,22 @@
           <div class="c-item">
             <div class="ic"><i data-lucide="phone"></i></div>
             <div class="c-body">
-              <div class="c-label">WhatsApp &amp; Phone</div>
+              <div class="c-label">IB &mdash; WhatsApp &amp; Phone</div>
               <div class="c-val"><a class="big" href="tel:+923224982249">+92 322 498 2249</a></div>
               <div class="c-actions">
                 <a class="c-btn wa" href="https://api.whatsapp.com/send/?phone=923219499991&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp</a>
                 <a class="c-btn" href="tel:+923224982249"><i data-lucide="phone"></i> Call</a>
+              </div>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="ic"><i data-lucide="phone"></i></div>
+            <div class="c-body">
+              <div class="c-label" style="font-size:10px;letter-spacing:.15em;white-space:nowrap;">Cambridge &mdash; WhatsApp &amp; Phone</div>
+              <div class="c-val"><a class="big" href="tel:+923019658477">+92 301 965 8477</a></div>
+              <div class="c-actions">
+                <a class="c-btn wa" href="https://api.whatsapp.com/send/?phone=923019658477&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener"><i data-lucide="message-circle"></i> WhatsApp</a>
+                <a class="c-btn" href="tel:+923019658477"><i data-lucide="phone"></i> Call</a>
               </div>
             </div>
           </div>
@@ -718,7 +731,7 @@
             <div class="ic"><i data-lucide="mail"></i></div>
             <div class="c-body">
               <div class="c-label">Email</div>
-              <div class="c-val"><a href="mailto:ibpreplahore@gmail.com">ibpreplahore@gmail.com</a></div>
+              <div class="c-val">ibpreplahore<span>&#64;</span>gmail<span>.</span>com</div>
             </div>
           </div>
         </div>
@@ -732,6 +745,9 @@
             <span class="chip">ISL</span>
             <span class="chip">Learning Alliance</span>
             <span class="chip">Premier American</span>
+            <span class="chip">JTi</span>
+            <span class="chip">Crescent</span>
+            <span class="chip">Trinity</span>
           </div>
         </div>
       </div>
@@ -833,6 +849,38 @@
       card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
     });
   });
+</script>
+<div class="cs-modal" id="csModal" role="dialog" aria-modal="true">
+  <div class="cs-modal-card">
+    <i data-lucide="clock"></i>
+    <h3 id="csModalTitle">Coming Soon</h3>
+    <p>We're still preparing this resource. Check back shortly.</p>
+    <button class="cs-modal-close" id="csModalClose">Got it</button>
+  </div>
+</div>
+<style>
+.cs-modal{position:fixed;inset:0;background:rgba(35,31,32,.55);display:none;align-items:center;justify-content:center;z-index:999;padding:24px;}
+.cs-modal.open{display:flex;}
+.cs-modal-card{background:var(--paper);border-radius:20px;padding:36px 32px;max-width:340px;text-align:center;box-shadow:0 30px 70px -30px rgba(35,31,32,.5);}
+.cs-modal-card i{color:var(--blue-deep);width:34px;height:34px;margin-bottom:12px;}
+.cs-modal-card h3{font-family:var(--nexa);font-weight:700;font-size:20px;margin-bottom:8px;color:var(--dark);}
+.cs-modal-card p{font-size:14px;color:var(--mut);line-height:1.5;margin-bottom:20px;}
+.cs-modal-close{font-family:var(--nexa);font-weight:700;font-size:14px;background:var(--dark);color:var(--paper);border:none;border-radius:999px;padding:10px 26px;cursor:pointer;}
+</style>
+<script>
+(function(){
+  const modal = document.getElementById('csModal');
+  const title = document.getElementById('csModalTitle');
+  document.querySelectorAll('.cs-soon').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      title.textContent = (el.dataset.soon || 'This resource') + ' — Coming Soon';
+      modal.classList.add('open');
+    });
+  });
+  document.getElementById('csModalClose').addEventListener('click', function(){ modal.classList.remove('open'); });
+  modal.addEventListener('click', function(e){ if (e.target === modal) modal.classList.remove('open'); });
+})();
 </script>
 </body>
 </html>
